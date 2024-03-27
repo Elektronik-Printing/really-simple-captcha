@@ -46,7 +46,7 @@ Generate a random word for CAPTCHA.
 
 Generate an image file and a corresponding text file in the temporary directory.
 
-    $prefix = mt_rand();
+    $prefix = wp_rand();
     $captcha_instance->generate_image( $prefix, $word );
 
 Then, show the image and get an answer from respondent.
