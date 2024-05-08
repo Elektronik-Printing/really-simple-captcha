@@ -20,6 +20,7 @@ class ReallySimpleCaptcha {
 	public $char_length;
 	public $fonts;
 	public $tmp_dir;
+	public $tmp_url;
 	public $img_size;
 	public $bg;
 	public $fg;
@@ -48,6 +49,9 @@ class ReallySimpleCaptcha {
 		/* Directory temporary keeping CAPTCHA images and corresponding text files */
 		$this->tmp_dir = path_join( __DIR__, 'tmp' );
 
+		/* Get the URL for the images to include in templates easy */
+        	$this->tmp_url = plugin_dir_url(__FILE__) . 'tmp';
+		
 		/* Array of CAPTCHA image size. Width and height */
 		$this->img_size = array( 72, 24 );
 
